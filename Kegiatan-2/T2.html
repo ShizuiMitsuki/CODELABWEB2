@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Form Validasi</title>
+  </head>
+
+  <link rel="stylesheet" href="style.css"/>
+ 
+  <body>
+    <div class="form">
+      <form>
+        <label for="nama">Nama Lengkap:</label><br/>
+        <input type="text" size="30" id="nama" name="fname" /><br/>
+        <label for="email">Email:</label><br/>
+        <input type="text" size="30" id="email" name="lname" /><br/>
+        <label for="alamat">Alamat:</label><br/>
+        <textarea name="alamat" id="alamat" cols="32" rows="4"></textarea><br/>
+        <input type="button" value="Submit" onclick="validasi()"/>
+      </form>
+    </div>
+    <script>
+      function validasi() {
+        if (document.getElementById("nama").value != "" && document.getElementById("email").value != "" && document.getElementById("alamat").value != "") {
+          alert("Berhasil Daftar");
+        } else {
+          alert("Anda Harus Mengisi Data Dengan Lengkap");
+        }
+      }
+    </script>
+  </body>
+</html>
